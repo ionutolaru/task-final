@@ -1,9 +1,11 @@
 entities\Tabel.class
 entities\Proiecte.class
-entities\Main.class
+task_manager\Tasks.class
 entities\Release.class
-entities\User.class
+task_manager\Check.class
 task_manager\Greeting.class
+entities\Comentarii.class
+entities\User.class
 task_manager\Login.class
 entities\Status.class
-entities\Comentarii.class
+task_manager\Main.class

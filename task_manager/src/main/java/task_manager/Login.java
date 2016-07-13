@@ -5,6 +5,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 
 
@@ -27,11 +28,13 @@ public class Login extends HttpServlet {
 		String username = req.getParameter("username").toString();
 		String password = req.getParameter("password").toString();
 		
+		HttpSession session = req.getSession(false);
+        if(session!=null)
+        
 		
 		
 		
-		
-		if (!"admin".equals(username) || !"pass".equals(password)) {
+		if (!Check.validate(username, password)) {
 			// not correct
 			// go back to login
 			doGet(req, resp);

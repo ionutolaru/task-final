@@ -23,6 +23,19 @@
 		<description></description>
 		<servlet-class>task_manager.Greeting</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>Main</servlet-name>
+		<display-name>Main</display-name>
+		<description></description>
+		<servlet-class>task_manager.Main</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Tasks</servlet-name>
+		<display-name>Tasks</display-name>
+		<description></description>
+		<servlet-class>task_manager.Tasks</servlet-class>
+	</servlet>
+	
 	
 	
 	<servlet-mapping>
@@ -36,6 +49,14 @@
 	<servlet-mapping>
 		<servlet-name>Greeting</servlet-name>
 		<url-pattern>/Greeting</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Main</servlet-name>
+		<url-pattern>/Main</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Tasks</servlet-name>
+		<url-pattern>/Tasks</url-pattern>
 	</servlet-mapping>
 
 </web-app>
