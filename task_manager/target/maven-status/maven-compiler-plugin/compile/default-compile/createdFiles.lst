@@ -1,0 +1,9 @@
+entities\Tabel.class
+entities\Proiecte.class
+entities\Main.class
+entities\Release.class
+entities\User.class
+task_manager\Greeting.class
+task_manager\Login.class
+entities\Status.class
+entities\Comentarii.class
