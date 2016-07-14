@@ -47,6 +47,24 @@
 		<description></description>
 		<servlet-class>task_manager.Logout</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>Selectt</servlet-name>
+		<display-name>Selectt</display-name>
+		<description></description>
+		<servlet-class>task_manager.Selectt</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Read</servlet-name>
+		<display-name>Read</display-name>
+		<description></description>
+		<servlet-class>task_manager.Read</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Insertt</servlet-name>
+		<display-name>Insertt</display-name>
+		<description></description>
+		<servlet-class>task_manager.Insertt</servlet-class>
+	</servlet>
 	
 	
 	<servlet-mapping>
@@ -76,6 +94,18 @@
 	<servlet-mapping>
 		<servlet-name>Logout</servlet-name>
 		<url-pattern>/Logout</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Selectt</servlet-name>
+		<url-pattern>/Selectt</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Read</servlet-name>
+		<url-pattern>/Read</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Insertt</servlet-name>
+		<url-pattern>/Insertt</url-pattern>
 	</servlet-mapping>
 	
 </web-app>
