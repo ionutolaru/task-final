@@ -6,6 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class Greeting extends HttpServlet{
 	
@@ -17,8 +18,17 @@ public class Greeting extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-	    req.setAttribute("username", req.getParameter("username"));
-		req.getRequestDispatcher("/jsp/Greeting.jsp").forward(req, resp);
+		HttpSession session = req.getSession(false);
+		
+		if(session.getAttribute("username")!=null){
+			req.setAttribute("username", req.getParameter("username"));
+			req.getRequestDispatcher("/jsp/Greeting.jsp").forward(req, resp);
+		}
+		else{
+			req.getRequestDispatcher("/jsp/login.jsp").forward(req, resp);
+		}
+		
+	    
 	}
 	
 	@Override

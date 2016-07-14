@@ -24,18 +24,29 @@
 		<servlet-class>task_manager.Greeting</servlet-class>
 	</servlet>
 	<servlet>
-		<servlet-name>Main</servlet-name>
-		<display-name>Main</display-name>
+		<servlet-name>Register</servlet-name>
+		<display-name>Register</display-name>
 		<description></description>
-		<servlet-class>task_manager.Main</servlet-class>
+		<servlet-class>task_manager.Register</servlet-class>
 	</servlet>
 	<servlet>
-		<servlet-name>Tasks</servlet-name>
-		<display-name>Tasks</display-name>
+		<servlet-name>Insert</servlet-name>
+		<display-name>Insert</display-name>
 		<description></description>
-		<servlet-class>task_manager.Tasks</servlet-class>
+		<servlet-class>task_manager.Insert</servlet-class>
 	</servlet>
-	
+	<servlet>
+		<servlet-name>Select</servlet-name>
+		<display-name>Select</display-name>
+		<description></description>
+		<servlet-class>task_manager.Select</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Logout</servlet-name>
+		<display-name>Logout</display-name>
+		<description></description>
+		<servlet-class>task_manager.Logout</servlet-class>
+	</servlet>
 	
 	
 	<servlet-mapping>
@@ -51,12 +62,20 @@
 		<url-pattern>/Greeting</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
-		<servlet-name>Main</servlet-name>
-		<url-pattern>/Main</url-pattern>
+		<servlet-name>Register</servlet-name>
+		<url-pattern>/Register</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
-		<servlet-name>Tasks</servlet-name>
-		<url-pattern>/Tasks</url-pattern>
+		<servlet-name>Insert</servlet-name>
+		<url-pattern>/Insert</url-pattern>
 	</servlet-mapping>
-
+	<servlet-mapping>
+		<servlet-name>Select</servlet-name>
+		<url-pattern>/Select</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Logout</servlet-name>
+		<url-pattern>/Logout</url-pattern>
+	</servlet-mapping>
+	
 </web-app>

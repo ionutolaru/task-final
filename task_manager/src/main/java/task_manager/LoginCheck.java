@@ -5,7 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class Check {
+public class LoginCheck {
     public static boolean validate(String name, String pass) {        
         boolean status = false;
         Connection conn = null;

@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 
-
 public class Login extends HttpServlet {
 
 	/**
@@ -18,7 +17,6 @@ public class Login extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		req.getRequestDispatcher("/jsp/login.jsp").forward(req, resp);
 	}
 
@@ -29,17 +27,17 @@ public class Login extends HttpServlet {
 		String password = req.getParameter("password").toString();
 		
 		HttpSession session = req.getSession(false);
-        if(session!=null)
-        
+		session.setAttribute("username", username);
+       // if(session!=null)
 		
 		
-		
-		if (!Check.validate(username, password)) {
+		if (!LoginCheck.validate(username, password)) {
 			// not correct
 			// go back to login
 			doGet(req, resp);
 		} else {
 			// correct! Greet!
+			session.setAttribute("username", username);
 			req.setAttribute("username", username);
 			req.getRequestDispatcher("/Greeting").forward(req, resp);
 		}
