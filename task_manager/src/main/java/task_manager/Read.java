@@ -8,6 +8,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.transaction.Transaction;
+
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -19,6 +21,7 @@ import entities.Proiecte;
  */
 public class Read extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	private static SessionFactory factory;
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -41,20 +44,19 @@ public class Read extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//HttpSession session = request.getSession(false);
-		SessionFactory factory = null;
 		Session session = factory.openSession();
-		
 	      org.hibernate.Transaction tx = null;
 	      try{
 	         tx = session.beginTransaction();
-	         List proiectes = session.createQuery("FROM proiecte").list(); 
-	         for (Iterator iterator = 
+	         @SuppressWarnings({ "deprecation", "rawtypes" })
+			List proiectes = session.createQuery("FROM proiecte").list(); 
+	         for (@SuppressWarnings("rawtypes")
+			Iterator iterator = 
 	                           proiectes.iterator(); iterator.hasNext();){
 	            Proiecte proiecte = (Proiecte) iterator.next(); 
 	            System.out.print("Project Name: " + proiecte.getProjectName()); 
-	            System.out.print(" Project description: " + proiecte.getProjectDescription()); 
-	            System.out.println("  Data Created " + proiecte.getDateCreated()); 
+	            System.out.print("  Project Description: " + proiecte.getProjectDescription()); 
+	            System.out.println("  Date Create: " + proiecte.getDateCreated()); 
 	         }
 	         tx.commit();
 	      }catch (HibernateException e) {

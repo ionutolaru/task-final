@@ -17,17 +17,9 @@
 <li><a href="http://localhost:8080/task_manager/Insertt">Register</a>
 <li><a href="http://localhost:8080/task_manager/Logout">Logout</a></li>
 </ul>
-<div id="left-column">
-<form action="Insert" method="POST">
-		<fieldset>
-			<legend>Personal information:</legend>
-			Username:<br> 
-			<input type="text" name="username"><br> 
-			Password:<br> 
-			<input type="text" name="password"><br>
-			<br> <input type="submit" value="Submit">
-		</fieldset>
-	</form>
+<div id="right-column">
+<p><%= (String)request.getAttribute("username") %></p>
+<p><%= (String)request.getAttribute("password") %></p>
 </div>
 </div>
  

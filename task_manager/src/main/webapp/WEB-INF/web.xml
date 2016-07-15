@@ -7,14 +7,12 @@
 	<servlet>
 		<servlet-name>User</servlet-name>
 		<display-name>User</display-name>
-		<description></description>
+	
 		<servlet-class>task_manager.User</servlet-class>
 	</servlet>
 	
 	<servlet>
 		<servlet-name>Login</servlet-name>
-		<display-name>Login</display-name>
-		<description></description>
 		<servlet-class>task_manager.Login</servlet-class>
 	</servlet>
 	<servlet>
@@ -65,6 +63,12 @@
 		<description></description>
 		<servlet-class>task_manager.Insertt</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>SelectProject</servlet-name>
+		<display-name>SelectProject</display-name>
+		<description></description>
+		<servlet-class>task_manager.SelectProject</servlet-class>
+	</servlet>
 	
 	
 	<servlet-mapping>
@@ -73,7 +77,7 @@
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>Login</servlet-name>
-		<url-pattern>/Login</url-pattern>
+		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>Greeting</servlet-name>
@@ -106,6 +110,10 @@
 	<servlet-mapping>
 		<servlet-name>Insertt</servlet-name>
 		<url-pattern>/Insertt</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SelectProject</servlet-name>
+		<url-pattern>/SelectProject</url-pattern>
 	</servlet-mapping>
 	
 </web-app>

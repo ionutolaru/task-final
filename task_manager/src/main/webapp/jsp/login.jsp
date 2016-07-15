@@ -1,8 +1,11 @@
 <html>
 <head>
 <title>Login</title>
+<style>
+<jsp:directive.include file="style.jsp"/>
+</style>
 </head>
-<body>
+<body >
 	<form action="Login" method="POST">
 		<fieldset>
 			<legend>Personal information:</legend>
