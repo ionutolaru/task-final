@@ -36,7 +36,7 @@ public class Read extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//request.getRequestDispatcher("/").forward(request, response);	
+		request.getRequestDispatcher("/jsp/read.jsp").forward(request, response);	
 		}
 
 	/**
@@ -48,11 +48,8 @@ public class Read extends HttpServlet {
 	      org.hibernate.Transaction tx = null;
 	      try{
 	         tx = session.beginTransaction();
-	         @SuppressWarnings({ "deprecation", "rawtypes" })
-			List proiectes = session.createQuery("FROM proiecte").list(); 
-	         for (@SuppressWarnings("rawtypes")
-			Iterator iterator = 
-	                           proiectes.iterator(); iterator.hasNext();){
+			List proiectes = session.createQuery("FROM Proiecte").list(); 
+	         for (Iterator iterator = proiectes.iterator(); iterator.hasNext();){
 	            Proiecte proiecte = (Proiecte) iterator.next(); 
 	            System.out.print("Project Name: " + proiecte.getProjectName()); 
 	            System.out.print("  Project Description: " + proiecte.getProjectDescription()); 

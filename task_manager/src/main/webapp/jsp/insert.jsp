@@ -17,13 +17,15 @@
 <li><a href="http://localhost:8080/task_manager/Insertt">Register</a>
 <li><a href="http://localhost:8080/task_manager/Logout">Logout</a></li>
 </ul>
+</div>
+
 <div id="left-column">
 <form action="Insert" method="POST">
 		<fieldset>
-			<legend>Personal information:</legend>
-			Username:<br> 
+			<legend>Register an user</legend>
+			Insert username <br> 
 			<input type="text" name="username"><br> 
-			Password:<br> 
+			Insert password:<br> 
 			<input type="text" name="password"><br>
 			<br> <input type="submit" value="Submit">
 		</fieldset>

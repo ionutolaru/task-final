@@ -9,18 +9,22 @@ body {
 
 #header {
 	background: red;
+	hight:10px
 }
 
 #left-column {
 	
 	float:left;
-	width:200px;
+	width:300px;
+	margin-top:5px;
+        margin-left:5px;
+        margin-right:3px;
 }
 
 #right-column {
 	margin-left:200px;
 	width:600px;
-	
+	margin-top:5px;
 }
 
 ul li{

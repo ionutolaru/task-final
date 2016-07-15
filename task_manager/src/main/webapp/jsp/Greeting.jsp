@@ -12,7 +12,7 @@
 <div id="header">
 <h1>Hello <%= (String)request.getAttribute("username") %>!</h1>
 <ul>
-<li><a href="http://localhost:8080/task_manager/ShowProject">Project</a></li>
+<li><a href="http://localhost:8080/task_manager/Read">Project</a></li>
 <li><a href="#">Task</a></li>
 <li><a href="http://localhost:8080/task_manager/Insertt">Register</a>
 <li><a href="http://localhost:8080/task_manager/Logout">Logout</a></li>

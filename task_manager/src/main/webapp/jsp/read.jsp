@@ -17,11 +17,14 @@
 <li><a href="http://localhost:8080/task_manager/Insertt">Register</a>
 <li><a href="http://localhost:8080/task_manager/Logout">Logout</a></li>
 </ul>
-<div id="right-column">
-<p><%= (String)request.getAttribute("username") %></p>
-<p><%= (String)request.getAttribute("password") %></p>
 </div>
+<div id="left-column">
+<p>Hello <%= (String)request.getAttribute("ProjectName") %>!</p>
+<p>Hello <%= (String)request.getAttribute("ProjectDescription") %>!</p>
+<p>Hello <%= (String)request.getAttribute("DateCreated") %>!</p>
 </div>
+
+
  
 </div><!--aici se termina wrapperul-->
 </body>
